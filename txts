@@ -75,6 +75,12 @@ class Txts(object):
                 self._style(line)
         except KeyboardInterrupt:
             pass
+        except IOError, e:
+            if e.errno == errno.EPIPE:
+                # broken pipe
+                pass
+            else:
+                raise e
         finally:
             sys.stdin.close()
 
