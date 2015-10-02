@@ -136,7 +136,7 @@ def get_conf_path(args):
 def loop_default_colors():
     while True:
         for style in ['bold','underline']:
-            for col in ['red', 'green', 'blue', 'magenta', 'cyan', 'white']:
+            for col in ['red', 'green', 'yellow', 'cyan', 'magenta', 'white']:
                 yield ( col, style )
 
 def main():
